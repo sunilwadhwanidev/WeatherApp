@@ -1,0 +1,42 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# Local configuration file (SDK path, etc.)
+local.properties
+
+# Log/OS files
+*.log
+*.temp
+*.swp
+*.tmp
+*.DS_Store
+*.idea/
+
+# Android Studio captures
+captures/
+
+# IntelliJ
+*.iml
+.idea/*
+!.idea/codeStyles
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (if you use Firebase)
+google-services.json
+
+# NDK
+obj/
+
+# Misc
+gen/
+out/
