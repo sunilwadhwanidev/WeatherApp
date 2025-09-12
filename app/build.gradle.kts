@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -8,6 +10,16 @@ android {
     namespace = "com.snapwork.weatherapp"
     compileSdk = 34
 
+    // Read OPENWEATHER_API_KEY from local.properties safely inside android block
+    val apiKey: String by lazy {
+        val props = Properties()
+        val localPropsFile = rootProject.file("local.properties")
+        if (localPropsFile.exists()) {
+            localPropsFile.inputStream().use { stream -> props.load(stream) }
+        }
+        props.getProperty("OPENWEATHER_API_KEY") ?: ""
+    }
+
     defaultConfig {
         applicationId = "com.snapwork.weatherapp"
         minSdk = 24
@@ -16,6 +28,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "OPENWEATHER_API_KEY", "\"$apiKey\"")
     }
 
     buildTypes {
@@ -31,6 +44,7 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        buildConfig = true
     }
 
     compileOptions {

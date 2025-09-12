@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.snapwork.weatherapp.BuildConfig
 import com.snapwork.weatherapp.R
 import com.snapwork.weatherapp.data.local.WeatherDatabase
 import com.snapwork.weatherapp.data.local.WeatherEntity
@@ -73,7 +74,8 @@ class CurrentWeatherFragment : Fragment() {
     }
 
     private fun fetchWeather(lat: Double, lon: Double) {
-        val apiKey = getString(R.string.openweather_api_key)
+        val apiKey = BuildConfig.OPENWEATHER_API_KEY
+
 
         lifecycleScope.launch {
             val response = withContext(Dispatchers.IO) {
