@@ -10,40 +10,40 @@ Open your app/src/main/res/values/strings.xml and add:
 
 📱 Features
 
- Registration & Sign In (local authentication)
+ -Registration & Sign In (local authentication)
 
- Fetch current location (City & Country) dynamically
+ -Fetch current location (City & Country) dynamically
 
- Display current temperature in Celsius
+ -Display current temperature in Celsius
 
- Show sunrise and sunset time
+ -Show sunrise and sunset time
 
- Display sun/moon icon based on time (after 6PM → moon)
+ -Display sun/moon icon based on time (after 6PM → moon)
 
- Show weather condition icon (rain, clear, etc.)
+ -Show weather condition icon (rain, clear, etc.)
 
 2 Tabs
 
-Current Weather (fetch live data)
+-Current Weather (fetch live data)
 
-Weather History (list stored in Room DB, auto-updated using Flow)
+-Weather History (list stored in Room DB, auto-updated using Flow)
 
-Room Database used to persist weather history
+-Room Database used to persist weather history
 
 Tech Stack
 
-Kotlin
+-Kotlin
 
-Android Jetpack Components (ViewModel, LiveData, Lifecycle)
+-Android Jetpack Components (ViewModel, LiveData, Lifecycle)
 
-Room Database (local storage)
+-Room Database (local storage)
 
-Retrofit2 + Gson (networking)
+-Retrofit2 + Gson (networking)
 
-Coroutines + Flow (async and reactive DB updates)
+-Coroutines + Flow (async and reactive DB updates)
 
-FusedLocationProviderClient (for location)
+-FusedLocationProviderClient (for location)
 
-View Binding & Data Binding (UI)
+-View Binding & Data Binding (UI)
 
-Material Components (TabLayout + ViewPager2)
+-Material Components (TabLayout + ViewPager2)
